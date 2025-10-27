@@ -89,10 +89,7 @@ export default function RootLayout({
         <Footer />
         <Toaster />
         <Suspense>
-          <AnalyticsWrapper 
-            METRIKA_ID={process.env.NEXT_PUBLIC_METRIKA_ID}
-            GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}
-          />
+          <AnalyticsWrapper />
         </Suspense>
       </body>
     </html>
