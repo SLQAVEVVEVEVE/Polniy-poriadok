@@ -6,6 +6,7 @@ import { ServicesGrid } from '@/components/services-grid';
 import { ObjectsGrid } from '@/components/objects-grid';
 import { ProjectsGrid } from '@/components/projects-grid';
 import { ClientsStrip } from '@/components/clients-strip';
+import Image from 'next/image';
 import { CtaForm } from '@/components/cta-form';
 import { ContactCard } from '@/components/contact-card';
 
@@ -29,8 +30,15 @@ export function HomeContent() {
         <ClientsStrip />
       </section>
       <section id="contacts" className="relative scroll-mt-20 py-20 min-h-[600px] flex items-center">
-        <div className="absolute inset-0 z-0 bg-contacts opacity-20 pointer-events-none"></div>
-        <div className="absolute inset-0 z-[1] bg-gradient-to-b from-white/30 via-white/60 to-white/80 pointer-events-none"></div>
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/backgrounds/contacts_background.png"
+            alt=""
+            fill
+            className="object-cover object-left-bottom opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-white/60 to-white/80"></div>
+        </div>
         <div className="container relative z-10">
           <div className="grid gap-8 md:grid-cols-2">
             <CtaForm />

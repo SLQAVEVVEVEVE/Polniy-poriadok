@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://stroykomplekt-msk.ru
+Host: https://pp-msk.ru
 
 # Sitemaps
-Sitemap: https://stroykomplekt-msk.ru/sitemap.xml
+Sitemap: https://pp-msk.ru/sitemap.xml

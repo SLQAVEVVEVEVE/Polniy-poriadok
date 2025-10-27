@@ -1,12 +1,25 @@
 'use client';
 
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 
 export function ProjectsGrid() {
   return (
     <section className="relative py-20 bg-white">
-      <div className="absolute inset-0 z-0 bg-projects opacity-15 pointer-events-none"></div>
-      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-white/20 via-white/40 to-white/60 pointer-events-none"></div>
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-black/10"></div>
+        <Image
+          src="/backgrounds/projects_background.png"
+          alt=""
+          fill
+          className="object-cover"
+          style={{
+            opacity: 0.8,
+            filter: 'contrast(1.1) brightness(1.1)'
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-white/30 to-white/60"></div>
+      </div>
       <div className="container relative z-10">
         <div className="mx-auto max-w-4xl text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -70,12 +83,7 @@ export function ProjectsGrid() {
                   </span>
                 </div>
                 <h3 className="text-xl font-semibold leading-tight line-clamp-2">{project.title}</h3>
-                <p className="mt-2 text-muted-foreground line-clamp-2 text-sm">{project.description}</p>
-                <div className="mt-auto pt-4">
-                  <Button variant="outline" className="w-full mt-4" size="sm">
-                    Подробнее
-                  </Button>
-                </div>
+                <p className="mt-2 text-muted-foreground line-clamp-2 text-sm mb-4">{project.description}</p>
               </div>
             </div>
           ))}
