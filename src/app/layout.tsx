@@ -9,6 +9,12 @@ import { Footer } from '@/components/footer'
 import { JsonLd } from '@/components/json-ld'
 import { generateOrganizationSchema } from '@/lib/structured-data'
 
+// Preload critical resources
+const preloadLinks = [
+  { href: '/backgrounds/polny_poryadok_background.png', as: 'image', type: 'image/png' },
+  { href: '/favicon.ico', as: 'image', type: 'image/x-icon' },
+];
+
 const inter = Inter({ subsets: ['latin', 'cyrillic'] })
 
 export const metadata = {
@@ -48,6 +54,31 @@ export default function RootLayout({
     <html lang="ru" className="scroll-smooth">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+        
+        {/* Preload critical resources */}
+        {preloadLinks.map((link, index) => (
+          <link 
+            key={index}
+            rel="preload"
+            href={link.href}
+            as={link.as}
+            type={link.type}
+            crossOrigin="anonymous"
+          />
+        ))}
+        
+        {/* Preconnect to external domains */}
+        <link rel="preconnect" href="https://mc.yandex.ru" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        
+        {/* Preload fonts */}
+        <link
+          rel="preload"
+          href="/fonts/Inter.var.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
         <JsonLd data={generateOrganizationSchema()} id="organization-schema" />
       </head>
       <body className={`${inter.className} min-h-screen flex flex-col`}>
