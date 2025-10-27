@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестовая страница</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            margin: 0; 
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 { color: #2563eb; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Тестовая страница</h1>
+        <p>Если вы видите этот текст, значит, статическая страница загружается корректно.</p>
+        <p>Время загрузки: <span id="time"></span></p>
+        <p>User Agent: <span id="ua"></span></p>
+    </div>
+
+    <script>
+        // Simple JavaScript to show load time and user agent
+        document.getElementById('time').textContent = new Date().toLocaleString();
+        document.getElementById('ua').textContent = navigator.userAgent;
+    </script>
+</body>
+</html>
