@@ -5,9 +5,9 @@ export function Footer() {
   
   return (
     <footer className="relative border-t bg-[#0A0A0A] text-white">
-      <div className="absolute inset-0 bg-[url('/backgrounds/footer_background.png')] bg-cover bg-center bg-no-repeat opacity-30 mix-blend-multiply"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] to-[#1A1A1A]"></div>
-      <div className="container relative z-10 py-12">
+      <div className="absolute inset-0 z-0 bg-footer opacity-30 mix-blend-multiply pointer-events-none"></div>
+      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-[#0A0A0A]/95 via-[#0A0A0A]/90 to-[#1A1A1A] pointer-events-none"></div>
+      <div className="container relative z-10 py-16">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Полный <span className="text-primary">⚡</span> Порядок</h3>

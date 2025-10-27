@@ -3,8 +3,8 @@
 export function ServicesGrid() {
   return (
     <section className="relative py-20 bg-white">
-      <div className="absolute inset-0 bg-[url('/backgrounds/services_background.png')] bg-contain bg-top-right bg-no-repeat opacity-10 lg:bg-fixed"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/90 to-white/80"></div>
+      <div className="absolute inset-0 z-0 bg-services opacity-10 lg:opacity-15 pointer-events-none"></div>
+      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-white/30 via-white/40 to-white/50 pointer-events-none"></div>
       <div className="container relative z-10">
         <div className="mx-auto max-w-3xl text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">

@@ -1,0 +1,34 @@
+.bg-hero {
+  background-image: url('/backgrounds/polny_poryadok_background.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-services {
+  background-image: url('/backgrounds/services_background.png');
+  background-position: right top;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bg-projects {
+  background-image: url('/backgrounds/projects_background.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-contacts {
+  background-image: url('/backgrounds/contacts_background.png');
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-footer {
+  background-image: url('/backgrounds/footer_background.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

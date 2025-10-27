@@ -28,9 +28,9 @@ export function HomeContent() {
       <section id="clients" className="scroll-mt-20">
         <ClientsStrip />
       </section>
-      <section id="contacts" className="relative scroll-mt-20 py-20">
-        <div className="absolute inset-0 bg-[url('/backgrounds/contacts_background.png')] bg-no-repeat bg-bottom-left opacity-20"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-white/90 to-white/80"></div>
+      <section id="contacts" className="relative scroll-mt-20 py-20 min-h-[600px] flex items-center">
+        <div className="absolute inset-0 z-0 bg-contacts opacity-20 pointer-events-none"></div>
+        <div className="absolute inset-0 z-[1] bg-gradient-to-b from-white/30 via-white/60 to-white/80 pointer-events-none"></div>
         <div className="container relative z-10">
           <div className="grid gap-8 md:grid-cols-2">
             <CtaForm />

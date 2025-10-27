@@ -5,8 +5,8 @@ import { Button } from '@/components/ui/button';
 export function ProjectsGrid() {
   return (
     <section className="relative py-20 bg-white">
-      <div className="absolute inset-0 bg-[url('/backgrounds/projects_background.png')] bg-cover bg-center bg-no-repeat opacity-20"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/90 to-white/80"></div>
+      <div className="absolute inset-0 z-0 bg-projects opacity-15 pointer-events-none"></div>
+      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-white/20 via-white/40 to-white/60 pointer-events-none"></div>
       <div className="container relative z-10">
         <div className="mx-auto max-w-4xl text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
