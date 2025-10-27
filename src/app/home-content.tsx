@@ -28,8 +28,10 @@ export function HomeContent() {
       <section id="clients" className="scroll-mt-20">
         <ClientsStrip />
       </section>
-      <section id="contacts" className="scroll-mt-20">
-        <div className="container">
+      <section id="contacts" className="relative scroll-mt-20 py-20">
+        <div className="absolute inset-0 bg-[url('/backgrounds/contacts_background.png')] bg-no-repeat bg-bottom-left opacity-20"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white/90 to-white/80"></div>
+        <div className="container relative z-10">
           <div className="grid gap-8 md:grid-cols-2">
             <CtaForm />
             <ContactCard />

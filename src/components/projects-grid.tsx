@@ -4,8 +4,10 @@ import { Button } from '@/components/ui/button';
 
 export function ProjectsGrid() {
   return (
-    <section className="py-20 bg-background">
-      <div className="container">
+    <section className="relative py-20 bg-white">
+      <div className="absolute inset-0 bg-[url('/backgrounds/projects_background.png')] bg-cover bg-center bg-no-repeat opacity-20"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/90 to-white/80"></div>
+      <div className="container relative z-10">
         <div className="mx-auto max-w-4xl text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Примеры выполненных проектов
@@ -54,7 +56,7 @@ export function ProjectsGrid() {
               details: 'Современное спортивное сооружение'
             }
           ].map((project, index) => (
-            <div key={index} className="group flex flex-col h-full overflow-hidden rounded-xl border border-border/50 bg-card shadow-sm transition-all hover:shadow-md">
+            <div key={index} className="group flex flex-col h-full overflow-hidden rounded-xl border border-border/50 bg-white/80 backdrop-blur-sm shadow-sm transition-all hover:shadow-md hover:border-primary/20">
               <div className="aspect-[4/3] bg-muted/50">
                 <div className="flex h-full items-center justify-center text-muted-foreground/50">
                   <span className="text-sm">Фото проекта</span>

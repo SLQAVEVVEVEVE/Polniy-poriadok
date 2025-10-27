@@ -2,8 +2,10 @@
 
 export function ServicesGrid() {
   return (
-    <section className="py-20 bg-muted/50">
-      <div className="container">
+    <section className="relative py-20 bg-white">
+      <div className="absolute inset-0 bg-[url('/backgrounds/services_background.png')] bg-contain bg-top-right bg-no-repeat opacity-10 lg:bg-fixed"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/90 to-white/80"></div>
+      <div className="container relative z-10">
         <div className="mx-auto max-w-3xl text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Наши услуги
@@ -40,7 +42,7 @@ export function ServicesGrid() {
               description: 'Срочный вызов электрика для устранения неисправностей'
             }
           ].map((service, index) => (
-            <div key={index} className="p-6 bg-card rounded-lg shadow-sm border hover:shadow-md transition-shadow">
+            <div key={index} className="p-6 bg-white/80 backdrop-blur-sm rounded-xl shadow-sm border border-border/50 hover:shadow-md transition-all hover:border-primary/20">
               <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
               <p className="text-muted-foreground">{service.description}</p>
             </div>

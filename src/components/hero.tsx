@@ -3,7 +3,9 @@ import { Button } from '@/components/ui/button'
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-primary/5 to-background py-16 sm:py-20 md:py-28 lg:py-32">
+    <section className="relative overflow-hidden bg-white py-16 sm:py-20 md:py-28 lg:py-32">
+      <div className="absolute inset-0 bg-[url('/backgrounds/polny_poryadok_background.png')] bg-cover bg-center bg-no-repeat opacity-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/80 to-white/60"></div>
       <div className="container relative z-10 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
